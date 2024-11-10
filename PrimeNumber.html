@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body style="text-align: center; font-size: 20px;">
+    <h3>Prime Number [logic 1]</h3>
+    Enter a Number: <input id = "number"><br> <br>
+    <button onclick="prime()">Find Out</button>
+    <p id="res"></p>
+    <script>
+        function prime()
+        {
+            let n = document.getElementById("number").value;
+            var count = 0;
+            for (var i=1;i<=n;i++)
+            {
+                if(n%i==0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+                document.getElementById("res").innerHTML=`${n} is a Prime Number.`;
+            else
+                document.getElementById("res").innerHTML=`${n} is NOT a Prime Number.`;
+        }
+    </script>
+</body>
+</html>

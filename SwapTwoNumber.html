@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Two Number</title>
+</head>
+<body style="text-align: center; font-size: 20px;">
+    <h1>Swap Two Numbers</h1>
+    Enter the value of A: <input type="text" name="" id="numberA"> <br><br>
+    Enter the value of B: <input type="text" name="" id="numberB"> <br><br>
+    <button onclick="swap()">Swap</button>
+    <p id="res"></p>
+
+    <script>
+        function swap()
+        {
+            let a = document.getElementById("numberA").value;  //5
+            let b = document.getElementById("numberB").value;  //4
+            let temp = a;   // temp = 5 
+            a = b;          // 4
+            b = temp;       // 5
+            document.getElementById("res").innerHTML=`After swapping: A = ${a}, B = ${b}`;
+        }
+    </script>
+</body>
+</html>

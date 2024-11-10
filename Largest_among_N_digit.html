@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Among N Digit Number</title>
+</head>
+<body style="text-align: center; font-size: 20px;">
+    <h1>Largest Digit</h1>
+    Enter a list of digits seperated by spaces: <input id="number"><br><br>
+    <button onclick="findlargestnumber()">Find Out</button>
+    <p id="res"></p>
+
+    <script>
+        function findlargestnumber()
+        {
+            let userinput = document.getElementById("number").value;
+            const digitArray = userinput.split('').map(Number);
+
+            if(digitArray.some(isNaN))
+            {
+                document.getElementById("res").innerHTML="Invalid input. Please enter a valid list of digits.";
+            }
+            else
+            {
+                if (!digitArray || digitArray.length === 0)
+                {
+                    return "Invalid input. Please provide an array of digits.";
+                }
+            let largest = digitArray[0];
+            for (let i=1; i<digitArray.length; i++)
+            {
+                if(digitArray[i]>largest)
+                {
+                    largest=digitArray[i];
+                }
+            }
+            document.getElementById("res").innerHTML=`The largest number is: ${largest}.`;
+            }
+        }
+    </script>
+</body>
+</html>

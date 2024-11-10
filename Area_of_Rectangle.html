@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Rectangle</title>
+</head>
+<body style="text-align: center; font-size: 20px;">
+    <h1>Rectangle Area Calculator</h1>    
+    <p>Enter the length and breadth of the Rectangle:</p>
+    <p>Lenght: <input type="number" name="" id="lengthInput" value="6"></p>
+    <p>Breadth: <input type="number" name="" id="breadthInput" value="4"></p>
+    <button onclick="CalculateArea()">Calculate Area</button>
+    <p id="output"></p>
+    <script>
+        function CalculateArea()
+        {
+            let length=parseFloat(document.getElementById("lengthInput").value);
+            let breadth=parseFloat(document.getElementById("breadthInput").value);
+            let area = length*breadth;
+            document.getElementById("output").textContent="Area of the Rectangle:" + area;
+        }
+    </script>
+</body>
+</html>
