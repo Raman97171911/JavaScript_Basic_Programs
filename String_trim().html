@@ -1,0 +1,25 @@
+<!-- String Programs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimming String</title>
+</head>
+<body style="text-align: center; font-size: 20px;">
+    <h1>String trimming</h1>
+    <label for="inputText">Enter some text with leading and trailing spaces:</label> <br><br>
+    <input type="text" name="" id="inputText" value="        Hello         World         "> <br><br>
+    <button onclick="trimText()">Trim Text</button>
+    <p id="outputMessage"></p>
+
+    <script>
+        function trimText(){
+            let text = document.getElementById("inputText").value;
+            let trimmedText = text.trim();
+            document.getElementById('outputMessage').textContent="Trimmed text is:" + trimmedText + "";
+        }
+    </script>
+</body>
+</html>
